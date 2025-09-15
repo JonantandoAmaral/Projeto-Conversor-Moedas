@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conversor de Moedas</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script defer src="./scripts.js"></script>
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
+  <script defer src="./scripts.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Conversor de Moedas</h1>
+
+    <form class="converte-form" id="converteForm">
+      <div class="currency-row">
+        <div class="currency-input">
+          <label for="amount">Valor (R$):</label>
+          <input
+            type="number"
+            id="amount"
+            placeholder="Digite o valor"
+            step="0.01"
+            min="0"
+            required
+          />
+        </div>
+
+        <div class="currency-select">
+          <label for="fromCurrency">De</label>
+          <select id="fromCurrency" required>
+            <option value="BRL" selected>Real Brasileiro (BRL)</option>
+            <option value="USD">Dólar Americano (USD)</option>
+            <option value="EUR">Euro (EUR)</option>
+            <option value="GBP">Libra Esterlina (GBP)</option>
+            <option value="JPY">Iene Japonês (JPY)</option>
+            <option value="AUD">Dólar Australiano (AUD)</option>
+            <option value="CAD">Dólar Canadense (CAD)</option>
+            <option value="CHF">Franco Suíço (CHF)</option>
+            <option value="CNY">Yuan Chinês (CNY)</option>
+            <option value="INR">Rupia Indiana (INR)</option>
+          </select>
+        </div>
+      </div>
+      <div class="currency-row">
+        <div class="currency-input">
+          <label for="convertedAmount">Resultado:</label>
+          <input
+            type="text"
+            id="convertedAmount"
+            placeholder="Valor convertido"
+            readonly
+          />
+        </div>
+
+        <div class="currency-select">
+          <label for="toCurrency">Para</label>
+          <select id="toCurrency" required>
+            <option value="BRL">Real Brasileiro (BRL)</option>
+            <option value="USD" selected>Dólar Americano (USD)</option>
+            <option value="EUR">Euro (EUR)</option>
+            <option value="GBP">Libra Esterlina (GBP)</option>
+            <option value="JPY">Iene Japonês (JPY)</option>
+            <option value="AUD">Dólar Australiano (AUD)</option>
+            <option value="CAD">Dólar Canadense (CAD)</option>
+            <option value="CHF">Franco Suíço (CHF)</option>
+            <option value="CNY">Yuan Chinês (CNY)</option>
+            <option value="INR">Rupia Indiana (INR)</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="converter-btn" id="converteBtn">
+        Converter Moeda
+      </button>
+    </form>
+    <div class="loading" style="display: none;">
+      <div class="spinner"></div>
+      <p>Buscando cotação...</p>
+    </div>
+    <div class="result" id="resultBox" style="display: none;"></div>
+    <div class="erro" id="erroBox" style="display: none;"></div>
+    <div class="info">
+      <p>Taxas atualizadas em tempo real</p>
+    </div>
+  </div>
+</body>
+</html>
