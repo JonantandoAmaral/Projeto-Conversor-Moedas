@@ -27,14 +27,13 @@ O usuário pode inserir um valor, selecionar a moeda de origem e a moeda de dest
 
 - HTML5
 - CSS3
-- JavaScript (puro)
+- JavaScript 
 - API de Câmbio (Ex: [ExchangeRate-API](https://www.exchangerate-api.com/))
 
 ---
 
 ## 📸 Demonstração
 
-<!-- Adicione um gif ou imagem se quiser -->
 <img src="./screenshot.png" alt="Demonstração do Conversor" width="600"/>
 
 ---
